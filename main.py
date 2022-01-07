@@ -16,6 +16,7 @@ c_sim = 5
 
 with open('data.csv') as csv_file:
   laptops = list(csv.reader(csv_file, delimiter=','))
+  laptops.pop(0)
   for i in range (1, count_spec+1):
     for row in laptops:
       row[i] = float(row[i])
